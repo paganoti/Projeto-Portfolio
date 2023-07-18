@@ -56,6 +56,7 @@ header .navegacao-primaria span {
 /* download cv section */
 
 .section-div {
+    animation: inicializar .7s forwards;
     background-color: #282C33;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -91,6 +92,39 @@ header .navegacao-primaria span {
     border-radius: 5px;
     border: 2px solid white;
 }
+
 .section-div img {
     max-width: 100%;
+}
+
+.digitando::after {
+    content: '|';
+    margin-left: 5px;
+    opacity: 1;
+    animation: pisca .5s infinite;
+}
+
+
+@keyframes inicializar {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -60px, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+
+    }
+}
+
+@keyframes pisca {
+    from {
+        opacity: 0;
+        
+    }
+    to {
+        opacity: 1;
+        
+
+    } 
 }
